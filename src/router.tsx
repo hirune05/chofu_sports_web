@@ -5,7 +5,7 @@ import { MainPage } from "./main/index"
 export const Router = () => {
   return (
     <Routes>
-      <Route path="/" element={<MainPage />} />
+      <Route path="/home" element={<MainPage />} />
     </Routes>
   )
 }

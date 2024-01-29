@@ -1,7 +1,8 @@
+import { NativeSelect } from '@mantine/core';
 
 export const MainPage = () => {
   return (
-    <h1>Hello World</h1>
+    <NativeSelect radius="lg"  data={['React', 'Angular', 'Vue']} />
   )
 }
 
