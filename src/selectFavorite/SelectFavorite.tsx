@@ -1,9 +1,10 @@
 import { Box,  Button,  Stack } from "@mantine/core"
+import { useState } from "react"
 import { useNavigate } from "react-router"
 
 const SelectFavorite = () => {
   return (
-    <Box>
+    <Box style={{ height: "100vh"}}>
       <h1>興味のあるジャンルを選んで始めよう</h1>
       <GenreButtonList/>
       <StartButton/>
@@ -19,27 +20,30 @@ const StartButton = () => {
 
   return (
     <Button
+      color="#5ABACF"
       style={{
-        margin: "auto",
-        display: "block",
-        marginTop: "30px"
+        bottom: "0",
+        width: "100vw",
+        height: "14vh",
+        position: "absolute"
       }}
       onClick={() => onClick()}
     >
-      スタート
+     スタート
     </Button>
   )
 }
 
 const GenreButtonList = () => {
+  const genres = ["ゲーム", "アニメ", "映画", "音楽", "スポーツ", "その他"]
   return (
-    <Stack>
-      <GenreButton genre="ゲーム"/>
-      <GenreButton genre="アニメ"/>
-      <GenreButton genre="映画"/>
-      <GenreButton genre="音楽"/>
-      <GenreButton genre="スポーツ"/>
-      <GenreButton genre="その他"/>
+    <Stack >
+      {genres.map((genre) => {
+        return (
+          <GenreButton genre={genre}/>
+        )
+      })}
+      
     </Stack>
   )
 }
@@ -49,16 +53,20 @@ const GenreButton = ({
 }: {
   genre: string
 }) => {
+
+  const [isSelected, setIsSelected] = useState<boolean>(false)
+
+  const selectedColor = "#0B71AB"
+  const unselectedColor = "#D9D9D9"
+  
   return (
-    <Button
-      style={{
-        margin: "auto",
-        display: "block",
-        marginTop: "2vh"
-      }}
-    >
-      {genre}
-    </Button>
+    <Button variant="filled" color={isSelected ? selectedColor : unselectedColor} size="md" radius="xl" style={{
+      margin: "auto",
+      display: "block",
+      marginTop: "10px"
+    }}
+    onClick={() => setIsSelected(!isSelected)}
+    >{genre}</Button>
   )
 }
 
