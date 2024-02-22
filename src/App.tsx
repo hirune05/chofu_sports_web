@@ -1,6 +1,7 @@
 import { BrowserRouter } from 'react-router-dom'
 import { Router } from './router'
 import '@mantine/core/styles.css';
+import '@mantine/carousel/styles.css';
 import { MantineProvider } from '@mantine/core';
 
 
