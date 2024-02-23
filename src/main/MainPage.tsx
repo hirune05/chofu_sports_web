@@ -7,7 +7,7 @@ const overlayBoxStyle : MantineStyleProp = {
     left: '0',
     width: '100vw',
     height: '55vh',
-    zIndex: 2, // Ensure the text appears above the video
+    zIndex: 2, 
     background: 'rgba(0, 35, 71, 0.5)',
     padding:"2em",
     display:"flex", flexFlow:"column",gap:"0.8em"
@@ -65,7 +65,7 @@ const PhoneVideoPlayer = ({
       ratio={9 / 16}
       style={{
         margin: "auto",
-        position: 'relative' // Ensure the container is positioned relatively for the absolute positioning of children
+        position: 'relative' 
       }}
     >
       <video
@@ -74,9 +74,9 @@ const PhoneVideoPlayer = ({
         autoPlay
         src={srcUrl}
         style={{
-          width: '100vw', // Ensure the video fills the container
-          height: '100vh', // Ensure the video fills the container
-          position: 'absolute', // Position the video absolutely to fill the container
+          width: '100vw', 
+          height: '100vh', 
+          position: 'absolute', 
           top: 0,
           left: 0
         }}
