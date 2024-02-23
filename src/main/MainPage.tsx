@@ -29,19 +29,25 @@ const EventBox = ({
 }: {
   videoUrl: string
 }) => {
+  const whiteText = (size: number) => {
+    return {
+      color: "white",
+      fontSize: `${size}vW`
+    }
+  }
   return (
     <Box style={{ position: 'relative'}}>
       <PhoneVideoPlayer srcUrl={videoUrl} />
     
       <Box style={overlayBoxStyle}>
-      <Text style={{ color: "white", fontSize: "5.2vW"}}>親子で楽しむスナッグゴルフとパターゴルフ</Text> 
-      <Text style={{ color: "white",fontSize: "5.2vW"}}>主催：調布スポーツ協会</Text> 
-      <Text style={{ color: "white",fontSize: "5.2vW"}}>概要:</Text> 
+      <Text style={whiteText(5.2)}>親子で楽しむスナッグゴルフとパターゴルフ</Text> 
+      <Text style={whiteText(5.2)}>主催：調布スポーツ協会</Text> 
+      <Text style={whiteText(4.8)}>概要:</Text> 
       <Box style={{border: "solid", borderColor: "white",padding:"1.2em",display:"flex", flexFlow:"column",gap:"1.2em"}}>
-        <Text style={{ color: "white",fontSize: "4.0vW"}}>場所：東京都中野区中野4-1-1</Text>
-        <Text style={{ color: "white",fontSize: "4.0vW"}}>料金：一人100円</Text>
-        <Text style={{ color: "white",fontSize: "4.0vW"}}>内容：ヨネックス株式会社との協働事業として実施する、小学生を対象としたスナッグゴルフとパターゴルフの教室</Text>
-        <Button variant="outline" color="white" style={{fontSize:"4.0vW"}}>詳細</Button>
+        <Text style={whiteText(4.0)}>場所：東京都中野区中野4-1-1</Text>
+        <Text style={whiteText(4.0)}>料金：一人100円</Text>
+        <Text style={whiteText(4.0)}>内容：ヨネックス株式会社との協働事業として実施する、小学生を対象としたスナッグゴルフとパターゴルフの教室</Text>
+        <Button variant="outline" color="white" style={whiteText(4.0)}>詳細</Button>
       </Box>
       </Box>
     </Box>
