@@ -13,6 +13,8 @@
     "@mantine/carousel": "^7.5.3",
     "@mantine/core": "^7.5.0",
     "@mantine/hooks": "^7.5.0",
+    "@tabler/icons": "^2.47.0",
+    "@tabler/icons-react": "^2.47.0",
     "@types/react-router-dom": "^5.3.3",
     "embla-carousel-react": "^7.1.0",
     "react": "^18.2.0",
