@@ -1,5 +1,6 @@
-import { AspectRatio, Box, Button, MantineStyleProp, Text } from "@mantine/core";
+import { AspectRatio, Box,  MantineStyleProp, Text } from "@mantine/core";
 import { Carousel } from '@mantine/carousel';
+import { Link } from "react-router-dom";
 
 const overlayBoxStyle : MantineStyleProp = {
     position: 'absolute',
@@ -47,7 +48,7 @@ const EventBox = ({
         <Text style={whiteText(4.0)}>場所：東京都中野区中野4-1-1</Text>
         <Text style={whiteText(4.0)}>料金：一人100円</Text>
         <Text style={whiteText(4.0)}>内容：ヨネックス株式会社との協働事業として実施する、小学生を対象としたスナッグゴルフとパターゴルフの教室</Text>
-        <Button variant="outline" color="white" style={whiteText(4.0)}>詳細</Button>
+        <Link to={"https://www.chofucity-sports.or.jp/tabid/254/Default.aspx"}  style={{fontSize:"4.0vw", border: "solid", borderColor:"white",color:"white", width:"100%",textAlign: "center"  } }>詳細</Link>
       </Box>
       </Box>
     </Box>
