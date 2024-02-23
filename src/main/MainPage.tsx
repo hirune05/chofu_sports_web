@@ -3,13 +3,14 @@ import { Carousel } from '@mantine/carousel';
 
 const overlayBoxStyle : MantineStyleProp = {
     position: 'absolute',
-    top: '50vh',
+    top: '45vh',
     left: '0',
     width: '100vw',
-    height: '50vh',
+    height: '55vh',
     zIndex: 2, // Ensure the text appears above the video
     background: 'rgba(0, 35, 71, 0.5)',
-    padding:"2em"
+    padding:"2em",
+    display:"flex", flexFlow:"column",gap:"0.8em"
   }
 
 
@@ -33,16 +34,14 @@ const EventBox = ({
       <PhoneVideoPlayer srcUrl={videoUrl} />
     
       <Box style={overlayBoxStyle}>
-      <Text style={{ color: "white"}}>親子で楽しむスナッグゴルフとパターゴルフ</Text> 
-      <br></br>
-      <Text style={{ color: "white"}}>主催：調布スポーツ協会</Text> 
-      <br></br>
-      <Text style={{ color: "white"}}>概要:</Text> 
+      <Text style={{ color: "white", fontSize: "5.2vW"}}>親子で楽しむスナッグゴルフとパターゴルフ</Text> 
+      <Text style={{ color: "white",fontSize: "5.2vW"}}>主催：調布スポーツ協会</Text> 
+      <Text style={{ color: "white",fontSize: "5.2vW"}}>概要:</Text> 
       <Box style={{border: "solid", borderColor: "white",padding:"1.2em",display:"flex", flexFlow:"column",gap:"1.2em"}}>
-        <Text style={{ color: "white"}}>場所：東京都中野区中野4-1-1</Text>
-        <Text style={{ color: "white"}}>料金：一人100円</Text>
-        <Text style={{ color: "white"}}>内容：ヨネックス株式会社との協働事業として実施する、小学生を対象としたスナッグゴルフとパターゴルフの教室</Text>
-        <Button variant="outline" color="white">詳細</Button>
+        <Text style={{ color: "white",fontSize: "4.0vW"}}>場所：東京都中野区中野4-1-1</Text>
+        <Text style={{ color: "white",fontSize: "4.0vW"}}>料金：一人100円</Text>
+        <Text style={{ color: "white",fontSize: "4.0vW"}}>内容：ヨネックス株式会社との協働事業として実施する、小学生を対象としたスナッグゴルフとパターゴルフの教室</Text>
+        <Button variant="outline" color="white" style={{fontSize:"4.0vW"}}>詳細</Button>
       </Box>
       </Box>
     </Box>
